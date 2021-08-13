@@ -3,7 +3,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-	CURLOPT_URL => "https://api.kawalcorona.com/indonesia",
+	CURLOPT_URL => "https://data.covid19.go.id/public/api/update.json",
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_FOLLOWLOCATION => true,
 	CURLOPT_ENCODING => "",
@@ -39,7 +39,7 @@ if ($err) {
 								<div class="col-lg-3 d-flex grid-margin stretch-card">
 									<div class="card positif">
 										<div class="card-body">
-											<h2 class="text-dark mb-2 font-weight-bold"><?php echo $data[0]['positif']; ?></h2>
+											<h2 class="text-dark mb-2 font-weight-bold"><?php echo $data['update']['total']['jumlah_positif']; ?></h2>
 											<h4 class="card-title mb-2">Kasus Positif</h4>
 											<small class="text-muted"><?php echo date("Y-m-d"); ?></small>
 										</div>
@@ -48,7 +48,7 @@ if ($err) {
 								<div class="col-lg-3 d-flex grid-margin stretch-card">
 									<div class="card sembuh">
 										<div class="card-body">
-											<h2 class="text-dark mb-2 font-weight-bold"><?php echo $data[0]['sembuh']; ?></h2>
+											<h2 class="text-dark mb-2 font-weight-bold"><?php echo $data['update']['total']['jumlah_sembuh']; ?></h2>
 											<h4 class="card-title mb-2">Kasus Sembuh</h4>
 											<small class="text-muted"><?php echo date("Y-m-d"); ?></small>
 										</div>
@@ -57,7 +57,7 @@ if ($err) {
 								<div class="col-lg-3 d-flex grid-margin stretch-card">
 									<div class="card dirawat">
 										<div class="card-body">
-											<h2 class="text-dark mb-2 font-weight-bold"><?php echo $data[0]['dirawat']; ?></h2>
+											<h2 class="text-dark mb-2 font-weight-bold"><?php echo $data['update']['total']['jumlah_dirawat']; ?></h2>
 											<h4 class="card-title mb-2">Kasus Dirawat</h4>
 											<small class="text-muted"><?php echo date("Y-m-d"); ?></small>
 										</div>
@@ -66,7 +66,7 @@ if ($err) {
 								<div class="col-lg-3 d-flex grid-margin stretch-card">
 									<div class="card meninggal">
 										<div class="card-body">
-											<h2 class="text-dark mb-2 font-weight-bold"><?php echo $data[0]['meninggal']; ?></h2>
+											<h2 class="text-dark mb-2 font-weight-bold"><?php echo $data['update']['total']['jumlah_meninggal']; ?></h2>
 											<h4 class="card-title mb-2">Kasus Meninggal</h4>
 											<small class="text-muted"><?php echo date("Y-m-d"); ?></small>
 										</div>
