@@ -12,6 +12,7 @@ if(isset($_POST['cekgejala'])){
     $sesak_nafas = filter_input(INPUT_POST, 'sesak_nafas', FILTER_SANITIZE_STRING);
     $daerah = strtoupper(filter_input(INPUT_POST, 'daerah', FILTER_SANITIZE_STRING));
     
+    
     $is_male = 0;
     $is_female = 0;
     $above_60_yes = 0;
@@ -81,68 +82,68 @@ if(isset($_POST['cekgejala'])){
               <form method=POST>
                 <div class="form-group">
                   <label for="exampleInputUsername1">Daerah kamu tinggal</label>
-                  <input type="text" name="daerah" class="form-control" id="exampleInputUsername1" placeholder="Contoh : Bandung">
+                  <input type="text" name="daerah" class="form-control" id="exampleInputUsername1" placeholder="Contoh : Bandung" required>
                 </div>
                 <div class="form-group">
                   <label>Apa jenis kelamin kamu ?</label>
-                  <select name="kelamin" class="form-control form-control-lg">
-                    <option>Pilih Jawaban</option>
+                  <select name="kelamin" class="form-control form-control-lg" required>
+                    <option value="">Pilih Jawaban</option>
                     <option value="1">Saya perempuan</option>
                     <option value="0">Saya laki - laki</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label>Apakah kamu sakit kepala ?</label>
-                  <select name="sakit_kepala" class="form-control form-control-lg">
-                    <option>Pilih Jawaban</option>
+                  <select name="sakit_kepala" class="form-control form-control-lg" required>
+                    <option value="">Pilih Jawaban</option>
                     <option value="1">Ya, sakit kepala</option>
                     <option value="0">Tidak, kepala saya tidak sakit</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label>Apakah kamu baru pulang dari luar negeri ?</label>
-                  <select name="pulang_luar_negeri" class="form-control form-control-lg">
-                    <option>Pilih Jawaban</option>
+                  <select name="pulang_luar_negeri" class="form-control form-control-lg" required>
+                    <option value="">Pilih Jawaban</option>
                     <option value="1">Ya, baru saja</option>
                     <option value="0">Tidak</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label>Apakah kamu baru saja berkontak dengan orang yang positif ?</label>
-                  <select name="kontak_dengan_positif" class="form-control form-control-lg">
-                    <option>Pilih Jawaban</option>
+                  <select name="kontak_dengan_positif" class="form-control form-control-lg" required>
+                    <option value="">Pilih Jawaban</option>
                     <option value="1">Ya, minggu ini</option>
                     <option value="0">Tidak</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label>Apakah kamu sedang demam ?</label>
-                  <select name="demam" class="form-control form-control-lg">
-                    <option>Pilih Jawaban</option>
+                  <select name="demam" class="form-control form-control-lg" required>
+                    <option value="">Pilih Jawaban</option>
                     <option value="1">Ya, saya sedang demam</option>
                     <option value="0">Tidak, saya tidak demam</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label>Apakah kamu batuk batuk ?</label>
-                  <select name="batuk" class="form-control form-control-lg">
-                    <option>Pilih Jawaban</option>
+                  <select name="batuk" class="form-control form-control-lg" required>
+                    <option value="">Pilih Jawaban</option>
                     <option value="1">Ya, saya sedang batuk - batuk</option>
                     <option value="0">Tidak, saya tidak batuk</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label>Apakah kamu berusia diatas 60 tahun ?</label>
-                  <select name="usia_lanjut" class="form-control form-control-lg">
-                    <option>Pilih Jawaban</option>
+                  <select name="usia_lanjut" class="form-control form-control-lg" required>
+                    <option value="">Pilih Jawaban</option>
                     <option value="1">Ya, saya berusia 60 tahun lebih</option>
                     <option value="0">Tidak, saya masih berusia dibawah 60 tahun</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label>Apakah kamu kesulitan bernafas ?</label>
-                  <select name="sesak_nafas" class="form-control form-control-lg">
-                    <option>Pilih Jawaban</option>
+                  <select name="sesak_nafas" class="form-control form-control-lg" required>
+                    <option value="">Pilih Jawaban</option>
                     <option value="1">Ya, saya kesulitan bernafas</option>
                     <option value="0">Tidak, saya tidak kesulitan bernafas</option>
                   </select>
