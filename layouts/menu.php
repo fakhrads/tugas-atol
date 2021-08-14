@@ -13,6 +13,12 @@
                     <span class="menu-title">Cek Gejala COVID-19</span>
                   </a>
               </li>
+              <li class="nav-item <?php if(isset($_GET['content'])) { if($_GET['content'] == "about") { ?>active<?php } } ?>">
+                  <a href="?content=about" class="nav-link">
+                    <i class="mdi mdi mdi-hospital menu-icon"></i>
+                    <span class="menu-title">Tentang Pembuat</span>
+                  </a>
+              </li>
             </ul>
         </div>
       </nav>

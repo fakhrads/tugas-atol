@@ -1,3 +1,3 @@
 <?php
 
-$cfg_baseurl = "https://tugasbesar.fakhrads.id";
+$cfg_baseurl = "/tugas_atol";

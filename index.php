@@ -11,12 +11,8 @@ require('config/mainconfig.php');
             $content = $_GET['content'];
             if ($content == "cekgejala") {
                 include_once "content/cek-gejala.php";
-            } else if ($content == "cuaca") {
-                include_once "content/cuaca.php";
-            } else if ($content == "transaksi-peminjaman") {
-                include_once "content/transaksi.php";
-            } else if ($content == "rak-buku") {
-                include_once "content/rak-buku.php";
+            } else if ($content == "about") {
+                include_once "content/about.php";
             }
         } else {
             include_once "content/index.php";
